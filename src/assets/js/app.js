@@ -1,5 +1,25 @@
 $(document).foundation();
 
+
+$('.one-time').slick({
+  dots: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3500,
+  responsive: [
+  {
+    breakpoint: 1000,
+    settings: {
+      mobileFirst: true,
+      adaptiveHeight: true
+    }
+  }
+  ]
+});
+
 // Elements to inject
 var mySVGsToInject = document.querySelectorAll('img.injectIt');
 
@@ -28,7 +48,7 @@ $(function() {
         $('#data3').text(marketCap);
         $('#data4').text(data.latestVersion);;
     }
-    $.getJSON('http://www.nodeexplorer.com/api_network_status_jsonp?callback=?');
+    $.getJSON('https://www.nodeexplorer.com/api_network_status_jsonp?callback=?');
 
 })
 
@@ -82,6 +102,7 @@ $.i18n.init({
     $('.multisig').i18n();
     $('.multisig2').i18n();
     $('.reputation').i18n();
+    $('.reputation2').i18n();
     $('.messaging').i18n();
     $('.architecture').i18n();
     $('.harvesting').i18n();
@@ -118,6 +139,8 @@ $.i18n.init({
     $('.spam').i18n();
     $('.supernode').i18n();
     $('.lightwallet').i18n();
+    $('.lightwallet2').i18n();
+    $('.lightwallet3').i18n();
     $('.nisApis').i18n();
 
 
@@ -182,6 +205,7 @@ $.i18n.init({
     $('#devResourcesContent5').i18n();
     $('#devResourcesContent6').i18n();
     $('#devResourcesContent7').i18n();
+    $('#devResourcesContent8').i18n();
 
     $('#devGuides').text($.t('devGuides'));
     $('#devGuidesContent').i18n();
